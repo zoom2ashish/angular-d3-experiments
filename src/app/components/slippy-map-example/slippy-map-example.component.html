@@ -1,0 +1,22 @@
+<svg #chart xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  appWithZoomHandler
+  appWithZoomableTiles
+  (tilesChange)="tilesChange($event)"
+  >
+  <g class="images-group">
+
+    <g *ngFor="let image of images" [attr.transform]="'translate('+ image.position[0] + ',' + image.position[1] +')'">
+        <image
+          [attr.xlink:href]="image.url"
+          [attr.width]="image.width" [attr.height]="image.height"
+          >
+      </image>
+
+      <rect
+      [attr.xlink:href]="image.url"
+      [attr.width]="image.width" [attr.height]="image.height"
+      >
+    </rect>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg #chart version="1.1" xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+  appWithZoomHandler
+  appWithZoomableTiles
+  [tileSize]="tileSize"
+  (tilesChange)="tilesChanged($event)"
+>
+  <g class="tiles-group">
+    <g class="tile-group" *ngFor="let tile of tiles" [attr.transform]="'translate('+ tile.position[0] + ',' + tile.position[1] +')'">
+      <rect [attr.width.px]="tile.width" [attr.height.px]="tile.height">
+      </rect>
+      <text x="1em" y="1em">{{tile.id}}</text>
+    </g>
+  </g>
+</svg>

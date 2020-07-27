@@ -1,0 +1,18 @@
+<div class="svgWrapper" #svgContainer>
+  <svg>
+    <g class="g-main" [attr.transform]="'translate(' + padding + ',' + padding +')'">
+      <g class="g-line">
+        <path [attr.d]="linePath"></path>
+      </g>
+      <g class="g-circles">
+        <g *ngFor="let circle of circles; trackBy: circleTrackBy" class="g-circles-wrap"
+          (click)="onDataPointClicked(circle)" (mouseenter)="onDataPointHover(circle?.data)"
+          (mouseleave)="onDataPointHover(null)">
+          <circle class="circle-outer" [attr.cx]="circle?.cx" [attr.cy]="circle?.cy" [attr.r]="circle?.radius + 5">
+          </circle>
+          <circle class="circle" [attr.cx]="circle?.cx" [attr.cy]="circle?.cy" [attr.r]="circle?.radius"></circle>
+        </g>
+      </g>
+    </g>
+  </svg>
+</div>

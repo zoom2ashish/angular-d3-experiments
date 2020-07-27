@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  margin-top: 12px;
+}
+
+:host div.svgWrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+:host svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+:host svg g.g-arcs g.g-arc {
+}

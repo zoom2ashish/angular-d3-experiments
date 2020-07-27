@@ -1,0 +1,62 @@
+<div class="main-container">
+	<header class="header-2">
+		<div class="branding">
+			<a class="nav-link">
+				<clr-icon shape="home" size="24"></clr-icon>
+				<span class="title">Project Clarity</span>
+			</a>
+		</div>
+		<div class="header-nav">
+			<a class="active nav-link nav-text">Home</a>
+		</div>
+	</header>
+	<div class="content-container">
+		<clr-tabs>
+			<clr-tab>
+					<button clrTabLink>Zoomable Tiles</button>
+					<clr-tab-content *clrIfActive>
+						<div class="content-area shadow">
+							<app-tile-example></app-tile-example>
+						</div>
+					</clr-tab-content>
+			</clr-tab>
+
+			<clr-tab>
+					<button clrTabLink>Slippy Map</button>
+					<clr-tab-content *clrIfActive>
+						<div class="content-area shadow">
+							<app-slippy-map-example></app-slippy-map-example>
+						</div>
+					</clr-tab-content>
+			</clr-tab>
+
+			<clr-tab>
+				<button clrTabLink>Bar Chart</button>
+				<clr-tab-content *clrIfActive>
+					<div class="content-area shadow">
+						<app-bar-chart class="bar-chart" [data]="barChartData"></app-bar-chart>
+					</div>
+				</clr-tab-content>
+			</clr-tab>
+
+			<clr-tab>
+				<button clrTabLink>Donut Chart</button>
+				<clr-tab-content *clrIfActive>
+					<div class="content-area shadow">
+						<app-donut-chart class="bar-chart" [data]="barChartData"></app-donut-chart>
+					</div>
+				</clr-tab-content>
+			</clr-tab>
+
+			<clr-tab>
+				<button clrTabLink>Sparkline Chart</button>
+				<clr-tab-content *clrIfActive>
+					<div class="content-area shadow">
+						<app-sparkline-chart class="line-chart" [data]="barChartData"></app-sparkline-chart>
+					</div>
+				</clr-tab-content>
+			</clr-tab>
+
+		</clr-tabs>
+	</div>
+</div>

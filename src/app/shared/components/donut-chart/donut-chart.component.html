@@ -1,0 +1,11 @@
+<div class="svgWrapper" #svgContainer>
+	<svg>
+		<g class="g-main" [attr.transform]="'translate('+  width/2 +','+ height / 2 +')'" >
+      <g class="g-arcs">
+        <g class="g-arc" *ngFor="let arcModel of arcs">
+          <path [attr.d]="arcModel?.path" [style.fill]="arcModel?.color"/>
+        </g>
+      </g>
+		</g>
+	</svg>
+</div>
